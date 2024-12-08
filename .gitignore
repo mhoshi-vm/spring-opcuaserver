@@ -1,0 +1,43 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+/src/main/resources/self-signed/
+/src/main/resources/self-signed/ca.crt
+/src/main/resources/self-signed/ca.csr
+/src/main/resources/self-signed/ca.key
+/src/main/resources/self-signed/ca.srl
+/src/main/resources/self-signed/ext.txt
+/src/main/resources/self-signed/ext_ca.txt
+/src/main/resources/self-signed/server.crt
+/src/main/resources/self-signed/server.csr
+/src/main/resources/self-signed/server.key
