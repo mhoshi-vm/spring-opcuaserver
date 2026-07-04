@@ -14,66 +14,72 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 class CustomNamespace extends ManagedAddressSpaceWithLifecycle {
-    public CustomNamespace(OpcUaServer server) {
-        super(server);
-    }
 
-    public CustomNamespace(OpcUaServer server, UaNodeManager nodeManager) {
-        super(server, nodeManager);
-    }
+	public CustomNamespace(OpcUaServer server) {
+		super(server);
+	}
 
-    @Override
-    public void onCreateDataItem(ReadValueId itemToMonitor, Double requestedSamplingInterval, UInteger requestedQueueSize, BiConsumer<Double, UInteger> revisionCallback) {
-        super.onCreateDataItem(itemToMonitor, requestedSamplingInterval, requestedQueueSize, revisionCallback);
-    }
+	public CustomNamespace(OpcUaServer server, UaNodeManager nodeManager) {
+		super(server, nodeManager);
+	}
 
-    @Override
-    public void onModifyDataItem(ReadValueId itemToModify, Double requestedSamplingInterval, UInteger requestedQueueSize, BiConsumer<Double, UInteger> revisionCallback) {
-        super.onModifyDataItem(itemToModify, requestedSamplingInterval, requestedQueueSize, revisionCallback);
-    }
+	@Override
+	public void onCreateDataItem(ReadValueId itemToMonitor, Double requestedSamplingInterval,
+			UInteger requestedQueueSize, BiConsumer<Double, UInteger> revisionCallback) {
+		super.onCreateDataItem(itemToMonitor, requestedSamplingInterval, requestedQueueSize, revisionCallback);
+	}
 
-    @Override
-    public void onCreateEventItem(ReadValueId itemToMonitor, UInteger requestedQueueSize, Consumer<UInteger> revisionCallback) {
-        super.onCreateEventItem(itemToMonitor, requestedQueueSize, revisionCallback);
-    }
+	@Override
+	public void onModifyDataItem(ReadValueId itemToModify, Double requestedSamplingInterval,
+			UInteger requestedQueueSize, BiConsumer<Double, UInteger> revisionCallback) {
+		super.onModifyDataItem(itemToModify, requestedSamplingInterval, requestedQueueSize, revisionCallback);
+	}
 
-    @Override
-    public void onModifyEventItem(ReadValueId itemToModify, UInteger requestedQueueSize, Consumer<UInteger> revisionCallback) {
-        super.onModifyEventItem(itemToModify, requestedQueueSize, revisionCallback);
-    }
+	@Override
+	public void onCreateEventItem(ReadValueId itemToMonitor, UInteger requestedQueueSize,
+			Consumer<UInteger> revisionCallback) {
+		super.onCreateEventItem(itemToMonitor, requestedQueueSize, revisionCallback);
+	}
 
-    @Override
-    public void onDataItemsCreated(List<DataItem> dataItems) {
+	@Override
+	public void onModifyEventItem(ReadValueId itemToModify, UInteger requestedQueueSize,
+			Consumer<UInteger> revisionCallback) {
+		super.onModifyEventItem(itemToModify, requestedQueueSize, revisionCallback);
+	}
 
-    }
+	@Override
+	public void onDataItemsCreated(List<DataItem> dataItems) {
 
-    @Override
-    public void onDataItemsModified(List<DataItem> dataItems) {
+	}
 
-    }
+	@Override
+	public void onDataItemsModified(List<DataItem> dataItems) {
 
-    @Override
-    public void onDataItemsDeleted(List<DataItem> dataItems) {
+	}
 
-    }
+	@Override
+	public void onDataItemsDeleted(List<DataItem> dataItems) {
 
-    @Override
-    public void onEventItemsCreated(List<EventItem> eventItems) {
-        super.onEventItemsCreated(eventItems);
-    }
+	}
 
-    @Override
-    public void onEventItemsModified(List<EventItem> eventItems) {
-        super.onEventItemsModified(eventItems);
-    }
+	@Override
+	public void onEventItemsCreated(List<EventItem> eventItems) {
+		super.onEventItemsCreated(eventItems);
+	}
 
-    @Override
-    public void onEventItemsDeleted(List<EventItem> eventItems) {
-        super.onEventItemsDeleted(eventItems);
-    }
+	@Override
+	public void onEventItemsModified(List<EventItem> eventItems) {
+		super.onEventItemsModified(eventItems);
+	}
 
-    @Override
-    public void onMonitoringModeChanged(List<MonitoredItem> monitoredItems) {
+	@Override
+	public void onEventItemsDeleted(List<EventItem> eventItems) {
+		super.onEventItemsDeleted(eventItems);
+	}
 
-    }
+	@Override
+	public void onMonitoringModeChanged(List<MonitoredItem> monitoredItems) {
+
+	}
+
 }
